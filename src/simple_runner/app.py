@@ -6,7 +6,7 @@ def main(outpath):
         out.write(header)
         out.write('\n')
         for row in range(100):
-            out.write(','.join([row] + [random.randint(1, 100) for col in header]))
+            out.write(','.join([row] + [random.randint(10, 100) for col in header]))
             out.write('\n')
 
 
