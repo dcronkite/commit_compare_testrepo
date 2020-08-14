@@ -3,7 +3,7 @@ import random
 
 
 def main(outpath):
-    header = ['id', 'val1', 'val2', 'val3']
+    header = ['id', 'val1', 'val2', 'val3', 'val4']
     with open(outpath, 'w') as out:
         out.write(','.join(header))
         out.write('\n')
