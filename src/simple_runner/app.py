@@ -8,7 +8,7 @@ def main(outpath):
         out.write(','.join(header))
         out.write('\n')
         for row in range(100):
-            out.write(','.join(str(x) for x in [row] + [random.randint(90, 100) for col in header]))
+            out.write(','.join(str(x) for x in [row] + [random.randint(0, 20) for col in header]))
             out.write('\n')
 
 
