@@ -1,12 +1,14 @@
 import sys
+import random
+
 
 def main(outpath):
     header = ['id', 'val1', 'val2', 'val3']
     with open(outpath, 'w') as out:
-        out.write(header)
+        out.write(','.join(header))
         out.write('\n')
         for row in range(100):
-            out.write(','.join([row] + [random.randint(10, 100) for col in header]))
+            out.write(','.join(str(x) for x in [row] + [random.randint(90, 100) for col in header]))
             out.write('\n')
 
 
