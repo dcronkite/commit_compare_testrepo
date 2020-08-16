@@ -1,6 +1,5 @@
 import sys
 import random
-import string
 
 
 def main(outpath):
@@ -9,8 +8,8 @@ def main(outpath):
     n_str = 1
     assert n_num + n_str + 1 == len(header)
     str_options = ['STRONG'] * random.randint(1, 10) + \
-                  ['NORMAL'] * random.randint(1, 10) + \
-                  ['WEAK'] * random.randint(1, 10)
+                  ['NORMAL'] * random.randint(5, 10) + \
+                  ['WEAK'] * random.randint(3, 10)
     with open(outpath, 'w') as out:
         out.write(','.join(header))
         out.write('\n')
