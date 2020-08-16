@@ -1,5 +1,6 @@
 import sys
 import random
+from logger import loguru  # test external module, ensure correct path being set
 from simple_runner.util import get_string_options
 
 
