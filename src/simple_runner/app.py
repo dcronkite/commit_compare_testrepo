@@ -1,5 +1,6 @@
 import sys
 import random
+from simple_runner.util import get_string_options
 
 
 def main(outpath):
@@ -7,9 +8,7 @@ def main(outpath):
     n_num = 4
     n_str = 1
     assert n_num + n_str + 1 == len(header)
-    str_options = ['STRONG'] * random.randint(2, 10) + \
-                  ['NORMAL'] * random.randint(9, 10) + \
-                  ['WEAK'] * random.randint(5, 10)
+    str_options = get_string_options()
     with open(outpath, 'w') as out:
         out.write(','.join(header))
         out.write('\n')
